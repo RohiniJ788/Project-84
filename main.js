@@ -25,7 +25,7 @@ function uploadImg() {
 window.addEventListener("keydown",my_keydown);
 function my_keydown(e)
 {
-	keyPressed = e.keyCode;
+	keyPressed=e.keyCode;
 	console.log(keyPressed);
 	
 		if(keyPressed>=97 && keyPressed<=122){
@@ -46,11 +46,11 @@ function my_keydown(e)
 			console.log("special key");
 		}
 		//write a code to check the type of key pressed
-	else 
+	else {
 		otherkey();
 		document.getElementById("d1").innerHTML="You pressed symbol or other key";
 		console.log("otherkey");
-	}
+	}}
 
 function alphabetkey()
 {
@@ -79,4 +79,3 @@ function otherkey()
 	img_image="otherkey.png";
 	add();
 }
-	
