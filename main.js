@@ -12,7 +12,7 @@ img_y = 100;
 
 function add() {
 	img_imgTag = new Image(); //defining a variable with a new image
-	img_imgTag.onload = uploadImg(); // setting a function, onloading this variable
+	img_imgTag.onload = uploadImg; // setting a function, onloading this variable
 	img_imgTag.src = img_image;   // load image
 }
 
@@ -28,7 +28,7 @@ function my_keydown(e)
 	keyPressed=e.keyCode;
 	console.log(keyPressed);
 	
-		if(keyPressed>=97 && keyPressed<=122){
+		if((keyPressed>=97 && keyPressed<=122)||(keyPressed>=65 && keyPressed<=90)){
 			alphabetkey();
 			document.getElementById("d1").innerHTML="You pressed Alphabet Key";
 			console.log("alphabet key");
@@ -40,7 +40,12 @@ function my_keydown(e)
 			console.log("number key");
 		}
 
-		else if (keyPressed>=17 && keyPressed<=27){
+		else if (keyPressed>=37 && keyPressed<=40){
+			arrowkey();
+			document.getElementById("d1").innerHTML="You pressed Arrow Key";
+			console.log("arrow key");
+		}
+		else if (keyPressed==17 || keyPressed==18 || keyPressed==27 ){
 			specialkey();
 			document.getElementById("d1").innerHTML="You pressed Special Key";
 			console.log("special key");
